@@ -68,3 +68,4 @@ baz([X|Xs]) -> [X | baz(zab(X,Xs))].
 zab(_N,[])     -> [];
 zab(N,[N|Xs]) -> zab(N,Xs);
 zab(N,[X|Xs]) -> [X | zab(N,Xs)].
+

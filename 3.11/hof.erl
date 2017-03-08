@@ -7,7 +7,7 @@ add(X) ->
 times(X) ->
     fun(Y) ->
 	     X*Y end.
-
+         
 compose(F,G) ->
     fun(X) -> G(F(X)) end.
 
@@ -15,7 +15,7 @@ multicompose(Fs) ->
     lists:foldl(fun compose/2, fun id/1, Fs).
 
 id(X) ->
-X.
+    X.
 
 iterate(0) ->
     dummy;

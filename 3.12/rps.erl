@@ -121,15 +121,16 @@ rock(_) ->
 % REPLACE THE dummy DEFINITIONS
 
 no_repeat([]) ->
-    dummy;
-no_repeat([X|_]=C) ->
-    dummy.
+    rock;
+no_repeat([X|_]) ->
+    X.
 
 const(Play) ->
     dummy.
 
 cycle(Xs) ->
-    dummy.
+    enum(length(Xs) rem 3).
 
 rand(_) ->
-dummy.
+    R = rand:uniform(3),
+    enum(R-1).
